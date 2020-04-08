@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import { Link } from "gatsby";
 import { theme } from "./theme";
 
 export const MainWrapper = styled.div`
@@ -17,112 +16,37 @@ export const Container = styled.div`
 `;
 export const Row = styled.div`
   display: flex;
-  flex: ${props => (props.flex ? props.flex : "initial")};
-  margin: ${props => (props.padded ? "0 -1rem" : "0")};
+  flex: ${(props) => (props.flex ? props.flex : "initial")};
+  margin: ${(props) => (props.padded ? "0 -1rem" : "0")};
   flex-direction: row;
-  flex-wrap: ${props => (props.wrap ? props.wrap : "initial")};
-  align-content: ${props =>
+  flex-wrap: ${(props) => (props.wrap ? props.wrap : "initial")};
+  align-content: ${(props) =>
     props.alignContent ? props.alignContent : "initial"};
-  justify-content: ${props =>
+  justify-content: ${(props) =>
     props.justifyContent ? props.justifyContent : "initial"};
   @media screen and (max-width: 768px) {
-    flex-direction: ${props => (props.mobile ? "column" : "row")};
+    flex-direction: ${(props) => (props.mobile ? "column" : "row")};
   }
 `;
 
 export const Column = styled.div`
-  flex: ${props => (props.flex ? props.flex : "initial")};
-  padding: ${props => (props.padded ? "0 1rem" : "0")};
+  flex: ${(props) => (props.flex ? props.flex : "initial")};
+  padding: ${(props) => (props.padded ? "0 1rem" : "0")};
   flex-direction: column;
-  align-content: ${props =>
+  align-content: ${(props) =>
     props.alignContent ? props.alignContent : "initial"};
-  justify-content: ${props =>
+  justify-content: ${(props) =>
     props.justifyContent ? props.justifyContent : "initial"};
-  margin: ${props => (props.margin ? props.margin : "0")};
-  width: ${props => (props.width ? props.width : "auto")};
+  margin: ${(props) => (props.margin ? props.margin : "0")};
+  width: ${(props) => (props.width ? props.width : "auto")};
 
   iframe {
     max-width: 100%;
   }
 `;
 
-const sharedButton = css`
-  border: 1px solid;
-  padding: ${props => (props.small ? ".5rem 1rem" : "1rem 2rem")};
-  transition: all 0.15s ease-in-out;
-  display: inline-block;
-  font-size: ${props => (props.small ? ".8rem" : "1rem")};
-  font-weight: 600;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-
-  &:hover {
-    transform: translate(0px, -2px);
-  }
-`;
-
 export const ButtonContainer = styled.div`
   display: flex;
-`;
-
-export const ButtonPrimary = styled(Link)`
-  ${sharedButton}
-  border-color: ${props => props.theme.colors.bodyColor};
-  background: ${props => props.theme.colors.bodyColor};
-  color: ${props => props.theme.colors.whiteColor};
-
-  &:hover {
-    border-color: ${props => props.theme.colors.primaryColor};
-    background: ${props => props.theme.colors.primaryColor};
-    color: ${props => props.theme.colors.bodyColor};
-  }
-`;
-
-export const BtnPrimary = styled.button`
-  ${sharedButton}
-  border-color: ${props => props.theme.colors.bodyColor};
-  background: ${props => props.theme.colors.bodyColor};
-  color: ${props => props.theme.colors.whiteColor};
-
-  &:hover {
-    border-color: ${props => props.theme.colors.primaryColor};
-    background: ${props => props.theme.colors.primaryColor};
-    color: ${props => props.theme.colors.bodyColor};
-  }
-`;
-
-export const ButtonSecondary = styled(Link)`
-  ${sharedButton}
-  color: ${props => props.theme.colors.bodyColor};
-  border-color: ${props => props.theme.colors.bodyColor};
-
-  &:hover {
-    border-color: ${props => props.theme.colors.primaryColor};
-    background: ${props => props.theme.colors.primaryColor};
-    color: ${props => props.theme.colors.bodyColor};
-  }
-`;
-
-export const ButtonInverse = styled(Link)`
-  ${sharedButton}
-  color: ${props => props.theme.colors.whiteColor};
-  border-color: ${props => props.theme.colors.whiteColor};
-
-  &:hover {
-    border-color: ${props => props.theme.colors.primaryColor};
-    background: ${props => props.theme.colors.primaryColor};
-    color: ${props => props.theme.colors.bodyColor};
-  }
-`;
-
-export const ButtonDownload = styled.button`
-  ${sharedButton}
-  border-color: ${props => props.theme.colors.primaryColor};
-  background: ${props => props.theme.colors.primaryColor};
-  color: ${props => props.theme.colors.bodyColor};
-  width: 100%;
 `;
 
 export const FlexContainer = styled.div`
