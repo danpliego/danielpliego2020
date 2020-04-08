@@ -1,10 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-if (typeof window !== `undefined`) {
-  window._ctct_m = "7ea89593a1a2608140f0eb885dbe8aa3";
-}
-
 export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
@@ -45,5 +41,5 @@ HTML.propTypes = {
   bodyAttributes: PropTypes.object,
   preBodyComponents: PropTypes.array,
   body: PropTypes.string,
-  postBodyComponents: PropTypes.array
+  postBodyComponents: PropTypes.array,
 };

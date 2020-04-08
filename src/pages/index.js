@@ -5,6 +5,7 @@ import SEO from "../components/seo";
 import * as Comp from "../components/layoutComponents";
 import Hero from "../components/hero";
 import { Proyectos } from "../components/proyectos";
+import Menu from "../components/menu";
 
 const IndexPage = () => (
   <Layout>

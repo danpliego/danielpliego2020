@@ -2,8 +2,6 @@ import { createGlobalStyle } from "styled-components";
 import { theme } from "./theme";
 
 // eslint-disable-next-line
-const GTAmerica = require("../fonts/GT-America-Mono-Regular.otf");
-// eslint-disable-next-line
 const OGG = require("../fonts/Ogg-Medium.ttf");
 
 export const GlobalStyle = createGlobalStyle`
@@ -12,13 +10,6 @@ export const GlobalStyle = createGlobalStyle`
     font-style: normal;
     font-weight: 400;
     src: url(${OGG});
-  }
-
-  @font-face {
-    font-family: "GT America Mono";
-    font-style: normal;
-    font-weight: 600;
-    src: url(${GTAmerica});
   }
 
   :root {
@@ -33,7 +24,9 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-text-size-adjust: 100%;
     touch-action: manipulation;
     overflow: hidden;
+    background: #F8F5F1;
   }
+  
   body {
     margin: 0;
     line-height: 1.5;
@@ -288,8 +281,8 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
   body {
-    color: #fff;
-    font-family: "GT America Mono", sans-serif;
+    color: #000;
+    font-family: "Aktiv Grotesk", sans-serif;
     font-weight: normal;
     word-wrap: break-word;
     font-kerning: normal;
@@ -297,7 +290,7 @@ export const GlobalStyle = createGlobalStyle`
     -ms-font-feature-settings: "kern", "liga", "clig", "calt";
     -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
     font-feature-settings: "kern", "liga", "clig", "calt";
-    background: #222222;
+    background: #F8F5F1;
     -webkit-font-smoothing: antialiased;
 	  -moz-osx-font-smoothing: grayscale;
   }
