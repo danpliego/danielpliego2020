@@ -2,7 +2,12 @@ import { createGlobalStyle } from "styled-components";
 import { theme } from "./theme";
 
 // eslint-disable-next-line
-const OGG = require("../fonts/Ogg-Medium.ttf");
+const OGG = require("../fonts/Ogg-Roman.woff2");
+// eslint-disable-next-line
+const OGGItalic = require("../fonts/Ogg-Italic.woff2");
+
+// eslint-disable-next-line
+const AktivGrotesk = require("../fonts/AktivGrotesk-Regular.woff2");
 
 export const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -12,13 +17,29 @@ export const GlobalStyle = createGlobalStyle`
     src: url(${OGG});
   }
 
+  @font-face {
+    font-family: "Ogg";
+    font-style: italic;
+    font-weight: 400;
+    src: url(${OGGItalic});
+  }
+
+  @font-face {
+    font-family: "Aktiv Grotesk";
+    font-style: italic;
+    font-weight: 400;
+    src: url(${AktivGrotesk});
+  }
+
   :root {
     --primary-color: #141943;
     --white: #FFFAFF;
   }
+
   * {
     box-sizing: border-box;
   }
+
   html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -37,6 +58,10 @@ export const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     color: inherit;
+
+    &:hover {
+      text-decoration: line-through;
+    }
   }
   article,
   aside,
@@ -91,12 +116,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6 {
-    line-height: 1.4;
+    line-height: 120%;
     margin-top: 0;
     margin-bottom: 1rem;
-  }
-
-  .serif {
     font-family: "Ogg";
   }
 
@@ -286,10 +308,6 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: normal;
     word-wrap: break-word;
     font-kerning: normal;
-    -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-    -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-    -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-    font-feature-settings: "kern", "liga", "clig", "calt";
     background: #F8F5F1;
     -webkit-font-smoothing: antialiased;
 	  -moz-osx-font-smoothing: grayscale;
@@ -626,7 +644,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .font-sm {
-    font-size: .9rem;
+    font-size: .88rem;
   }
 
   .font-xs {
@@ -639,6 +657,10 @@ export const GlobalStyle = createGlobalStyle`
 
   .text-center {
     text-align: center;
+  }
+
+  .reset-m {
+    margin: 0;
   }
 
   .form-control {

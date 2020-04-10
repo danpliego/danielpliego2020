@@ -63,7 +63,7 @@ export const FlexCenterChild = styled(FlexContainer)`
 `;
 
 export const FlexAlignChild = styled(FlexContainer)`
-  talign-items: center;
+  align-items: center;
 `;
 
 export const FlexJustifyChild = styled(FlexContainer)`

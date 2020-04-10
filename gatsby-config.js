@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Ramiro Mendoza - Arquitecto`,
-    description: `Experto en desarrollo de proyectos que van desde el diseño hasta la ejecución de los mismos, siendo desde casa habitación hasta construcción de departamentos en condominio, así como remodelación de espacios, todo con una sola intención de entregar una calidad ejemplar.`,
+    title: `Daniel Pliego`,
+    description: `....`,
     author: ``
   },
   plugins: [
