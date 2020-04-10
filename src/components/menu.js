@@ -17,6 +17,9 @@ const Menu = () => (
     <MenuRight>
       <MenuItem to="#work">Work</MenuItem>
       <MenuItem to="#about">About Me</MenuItem>
+      <MenuItem as="a" href="mailto:danielpliego@gmail.com">
+        Contact
+      </MenuItem>
       {/* <MenuItem to="/">Español</MenuItem> */}
       <MenuItem as="a" href="https://dribbble.com/danpliego" target="_blank">
         <img src={Dribbble} />

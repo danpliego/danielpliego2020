@@ -12,12 +12,12 @@ const Hero = () => (
         <i>product design</i> and <i>front-end dev</i> on days and <i>music</i>{" "}
         at nights.
       </h1>
-      <Comp.FlexAlignChild>
+      <Comp.FlexContainer>
         <AvailableCircle />
         <p className="font-sm reset-m">
-          Currently available for Full-time and Freelance
+          Currently available for full-time and contract work{" "}
         </p>
-      </Comp.FlexAlignChild>
+      </Comp.FlexContainer>
     </HeroContent>
     <ImagesContainer>
       <img src={Circle1} />

@@ -263,6 +263,8 @@ const FooterContainer = styled.footer`
   background: #000;
   color: #fff;
   margin-top: 6rem;
+  z-index: 2;
+  position: relative;
 `;
 
 const AboutMeContainer = styled(Comp.FlexAlignChild)`

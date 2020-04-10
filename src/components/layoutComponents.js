@@ -14,31 +14,32 @@ export const Container = styled.div`
   padding: 0px 1.0875rem;
   padding-top: 0;
 `;
+
 export const Row = styled.div`
   display: flex;
-  flex: ${(props) => (props.flex ? props.flex : "initial")};
-  margin: ${(props) => (props.padded ? "0 -1rem" : "0")};
+  flex: ${props => (props.flex ? props.flex : "initial")};
+  margin: ${props => (props.padded ? "0 -1rem" : "0")};
   flex-direction: row;
-  flex-wrap: ${(props) => (props.wrap ? props.wrap : "initial")};
-  align-content: ${(props) =>
+  flex-wrap: ${props => (props.wrap ? props.wrap : "initial")};
+  align-content: ${props =>
     props.alignContent ? props.alignContent : "initial"};
-  justify-content: ${(props) =>
+  justify-content: ${props =>
     props.justifyContent ? props.justifyContent : "initial"};
   @media screen and (max-width: 768px) {
-    flex-direction: ${(props) => (props.mobile ? "column" : "row")};
+    flex-direction: ${props => (props.mobile ? "column" : "row")};
   }
 `;
 
 export const Column = styled.div`
-  flex: ${(props) => (props.flex ? props.flex : "initial")};
-  padding: ${(props) => (props.padded ? "0 1rem" : "0")};
+  flex: ${props => (props.flex ? props.flex : "initial")};
+  padding: ${props => (props.padded ? "0 1rem" : "0")};
   flex-direction: column;
-  align-content: ${(props) =>
+  align-content: ${props =>
     props.alignContent ? props.alignContent : "initial"};
-  justify-content: ${(props) =>
+  justify-content: ${props =>
     props.justifyContent ? props.justifyContent : "initial"};
-  margin: ${(props) => (props.margin ? props.margin : "0")};
-  width: ${(props) => (props.width ? props.width : "auto")};
+  margin: ${props => (props.margin ? props.margin : "0")};
+  width: ${props => (props.width ? props.width : "auto")};
 
   iframe {
     max-width: 100%;
