@@ -29,7 +29,7 @@ const Hero = () => (
 export default Hero;
 
 const HeroContainer = styled(Comp.FlexAlignChild)`
-  padding: 4rem 0 9rem;
+  padding: 4rem 0 7rem;
 `;
 
 const HeroContent = styled.div`
