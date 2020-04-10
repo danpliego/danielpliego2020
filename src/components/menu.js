@@ -15,9 +15,9 @@ const Menu = () => (
       </Link>
     </LogoContainer>
     <MenuRight>
-      <MenuItem to="/">Work</MenuItem>
-      <MenuItem to="/">About Me</MenuItem>
-      <MenuItem to="/">Español</MenuItem>
+      <MenuItem to="#work">Work</MenuItem>
+      <MenuItem to="#about">About Me</MenuItem>
+      {/* <MenuItem to="/">Español</MenuItem> */}
       <MenuItem as="a" href="https://dribbble.com/danpliego" target="_blank">
         <img src={Dribbble} />
       </MenuItem>

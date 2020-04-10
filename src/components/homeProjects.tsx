@@ -4,6 +4,9 @@ import * as Comp from "./layoutComponents";
 
 // eslint-disable-next-line
 const Beaubble = require("../images/thumbnails/beaubble.jpg");
+const Berbli = require("../images/thumbnails/berbli.jpg");
+const Praga = require("../images/thumbnails/praga.jpg");
+const DealEngine = require("../images/thumbnails/deal-engine.jpg");
 
 // eslint-disable-next-line
 const ArrowRight = require("../images/arrow-right.svg");
@@ -19,36 +22,36 @@ export const HomeProjects: React.FC = () => {
           external_url="https://beaubble.com"
         />
         <ProjectCard
-          image={Beaubble}
-          name="Beaubble"
-          description="Front-End: React, Styled Components, Storybooks"
-          external_url="https://beaubble.com"
+          image={Berbli}
+          name="Berbli"
+          description="Full Project"
+          external_url="http://berbli.danielpliego.com/"
         />
         <ProjectCard
-          image={Beaubble}
-          name="Beaubble"
-          description="Front-End: React, Styled Components, Storybooks"
-          external_url="https://beaubble.com"
+          image={Praga}
+          name="Praga"
+          description="Website theme design"
+          external_url="https://dribbble.com/shots/6021701-Praga-Real-Estate-Website-Theme/attachments/1293920"
         />
       </Comp.Row>
       <Comp.Row mobile padded>
         <ProjectCard
-          image={Beaubble}
-          name="Beaubble"
-          description="Front-End: React, Styled Components, Storybooks"
-          external_url="https://beaubble.com"
+          image={DealEngine}
+          name="Deal Engine"
+          description="Full Project"
+          external_url="https://deal-engine.com/"
         />
         <ProjectCard
           image={Beaubble}
-          name="Beaubble"
-          description="Front-End: React, Styled Components, Storybooks"
-          external_url="https://beaubble.com"
+          name="Indigo Translations"
+          description="Full Project"
+          external_url="http://indigotranslations.com.mx/"
         />
         <ProjectCard
           image={Beaubble}
-          name="Beaubble"
-          description="Front-End: React, Styled Components, Storybooks"
-          external_url="https://beaubble.com"
+          name="Ramiro Mendoza"
+          description="Full Project"
+          external_url="http://ramiromendozaarq.com/"
         />
       </Comp.Row>
     </>
@@ -95,6 +98,9 @@ const ProjectCardContainer = styled(Comp.Column)`
   transition: all 0.15s ease-in-out;
   margin-bottom: 4rem;
 
+  > img {
+  }
+
   &:hover {
     text-decoration: line-through;
     transform: translate(0px, -1px);
@@ -105,36 +111,27 @@ const HoverActions = styled.a`
   opacity: 0;
   background: rgba(0, 0, 0, 0.5);
   transition: all 0.15s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 97%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none !important;
 `;
 
 const ProjectImage = styled.div`
   display: block;
   position: relative;
   overflow: hidden;
-  height: 300px;
   margin-bottom: 1rem;
-
-  > img {
-    height: auto;
-    width: auto;
-    min-width: 100%;
-    min-height: 100%;
-    position: absolute;
-  }
 
   &:hover {
     ${HoverActions} {
       opacity: 1;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      text-decoration: none;
     }
   }
 `;
