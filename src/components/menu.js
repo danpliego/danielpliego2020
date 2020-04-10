@@ -35,6 +35,10 @@ export default Menu;
 
 const MenuContainer = styled(FlexAlignChild)`
   padding: 1.7rem 0;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  max-width: 1190px;
 `;
 
 const LogoContainer = styled.div`

@@ -5,7 +5,7 @@ import Circle3 from "../images/circle-3.svg";
 import Bullet from "../images/bullet.svg";
 
 const Footer = () => (
-  <FooterContainer>
+  <FooterContainer id="about">
     <Comp.Container>
       <AboutMeContainer>
         <AboutMeContent>
@@ -262,6 +262,7 @@ const Footer = () => (
 const FooterContainer = styled.footer`
   background: #000;
   color: #fff;
+  margin-top: 6rem;
 `;
 
 const AboutMeContainer = styled(Comp.FlexAlignChild)`

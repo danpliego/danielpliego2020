@@ -7,13 +7,19 @@ const Beaubble = require("../images/thumbnails/beaubble.jpg");
 const Berbli = require("../images/thumbnails/berbli.jpg");
 const Praga = require("../images/thumbnails/praga.jpg");
 const DealEngine = require("../images/thumbnails/deal-engine.jpg");
+const Indigo = require("../images/thumbnails/indigo.jpg");
+const Ramiro = require("../images/thumbnails/ramiro.jpg");
 
 // eslint-disable-next-line
 const ArrowRight = require("../images/arrow-right.svg");
+const ArrowDown = require("../images/arrow-down.svg");
 
 export const HomeProjects: React.FC = () => {
   return (
-    <>
+    <div id="work" style={{ paddingTop: "6rem" }}>
+      <h4>
+        Selected work <img src={ArrowDown} />
+      </h4>
       <Comp.Row mobile padded>
         <ProjectCard
           image={Beaubble}
@@ -22,16 +28,16 @@ export const HomeProjects: React.FC = () => {
           external_url="https://beaubble.com"
         />
         <ProjectCard
-          image={Berbli}
-          name="Berbli"
-          description="Full Project"
-          external_url="http://berbli.danielpliego.com/"
-        />
-        <ProjectCard
           image={Praga}
           name="Praga"
           description="Website theme design"
           external_url="https://dribbble.com/shots/6021701-Praga-Real-Estate-Website-Theme/attachments/1293920"
+        />
+        <ProjectCard
+          image={Berbli}
+          name="Berbli"
+          description="Full Project"
+          external_url="http://berbli.danielpliego.com/"
         />
       </Comp.Row>
       <Comp.Row mobile padded>
@@ -42,19 +48,19 @@ export const HomeProjects: React.FC = () => {
           external_url="https://deal-engine.com/"
         />
         <ProjectCard
-          image={Beaubble}
+          image={Indigo}
           name="Indigo Translations"
           description="Full Project"
           external_url="http://indigotranslations.com.mx/"
         />
         <ProjectCard
-          image={Beaubble}
-          name="Ramiro Mendoza"
+          image={Ramiro}
+          name="Ramiro Mendoza Arq."
           description="Full Project"
           external_url="http://ramiromendozaarq.com/"
         />
       </Comp.Row>
-    </>
+    </div>
   );
 };
 
@@ -96,7 +102,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
 const ProjectCardContainer = styled(Comp.Column)`
   width: 100%;
   transition: all 0.15s ease-in-out;
-  margin-bottom: 4rem;
+  margin: 1rem 0;
 
   > img {
   }
