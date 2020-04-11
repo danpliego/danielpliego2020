@@ -13,6 +13,11 @@ export const Container = styled.div`
   max-width: 1200px;
   padding: 0px 1.0875rem;
   padding-top: 0;
+
+  @media (max-width: 1200px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 `;
 
 export const Row = styled.div`

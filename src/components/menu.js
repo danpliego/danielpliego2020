@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Logo from "../images/logo.svg";
 import Dribbble from "../images/dribbble.svg";
 import Linkedin from "../images/linkedin.svg";
+import { theme } from "./theme";
 
 const Menu = () => (
   <MenuContainer>
@@ -15,8 +16,12 @@ const Menu = () => (
       </Link>
     </LogoContainer>
     <MenuRight>
-      <MenuItem to="#work">Work</MenuItem>
-      <MenuItem to="#about">About Me</MenuItem>
+      <MenuItem to="#work" className="hide-mobile">
+        Work
+      </MenuItem>
+      <MenuItem to="#about" className="hide-mobile">
+        About Me
+      </MenuItem>
       <MenuItem as="a" href="mailto:danielpliego@gmail.com">
         Contact
       </MenuItem>
@@ -37,11 +42,11 @@ const Menu = () => (
 export default Menu;
 
 const MenuContainer = styled(FlexAlignChild)`
-  padding: 1.7rem 0;
+  padding: 1.7rem 1rem 1.7rem 0;
   position: fixed;
   z-index: 1;
-  width: 100%;
-  max-width: 1190px;
+  width: calc(100% - 2rem);
+  max-width: 1200px;
 `;
 
 const LogoContainer = styled.div`
@@ -64,6 +69,16 @@ export const MenuItem = styled(Link)`
   padding: 1rem 1.5rem;
   display: block;
   transition: all 0.15s ease-in-out;
+
+  &.hide-mobile {
+    @media ${theme.breakpoint.onlyMobile} {
+      display: none;
+    }
+  }
+
+  @media ${theme.breakpoint.onlyMobile} {
+    padding: 1rem;
+  }
 
   &:hover {
     text-decoration: line-through;

@@ -3,21 +3,21 @@ import * as Comp from "./layoutComponents";
 import Circle1 from "../images/circle-1.svg";
 import Circle2 from "../images/circle-2.svg";
 import styled from "styled-components";
+import { theme } from "./theme";
 
 const Hero = () => (
   <HeroContainer>
     <HeroContent>
       <h1>
         Hi! I&apos;m Dan Pliego, I live in Mexico City and I do <i>branding</i>,{" "}
-        <i>product design</i> and <i>front-end dev</i> on days and <i>music</i>{" "}
-        at nights.
+        <i>product design</i> and <i>front-end dev</i>.
       </h1>
-      <Comp.FlexContainer>
+      <Comp.FlexAlignChild>
         <AvailableCircle />
-        <p className="font-sm reset-m">
+        <p className="reset-m">
           Currently available for full-time and contract work{" "}
         </p>
-      </Comp.FlexContainer>
+      </Comp.FlexAlignChild>
     </HeroContent>
     <ImagesContainer>
       <img src={Circle1} />
@@ -29,7 +29,10 @@ const Hero = () => (
 export default Hero;
 
 const HeroContainer = styled(Comp.FlexAlignChild)`
-  padding: 11rem 0 4rem;
+  padding: 8rem 0 0;
+  @media ${theme.breakpoint.upFromMobile} {
+    padding: 11rem 0 4rem;
+  }
 `;
 
 const HeroContent = styled.div`
@@ -37,13 +40,22 @@ const HeroContent = styled.div`
   padding-right: 2rem;
 
   h1 {
-    font-size: 3.9rem;
-    margin-bottom: 3rem;
+    font-size: 2rem;
+  }
+
+  @media ${theme.breakpoint.upFromMobile} {
+    h1 {
+      font-size: 3.9rem;
+      margin-bottom: 3rem;
+    }
+
+    i {
+      display: inline-block;
+    }
   }
 
   i {
     transition: all 0.3s ease-in-out;
-    display: inline-block;
 
     &:hover {
       transform: translate(0px, -3px);
@@ -52,12 +64,15 @@ const HeroContent = styled.div`
 `;
 
 const ImagesContainer = styled.div`
+  @media ${theme.breakpoint.onlyMobile} {
+    display: none;
+  }
   flex: 2;
   position: relative;
   height: 343px;
 
   img {
-    top: -6rem;
+    top: -4rem;
     position: absolute;
 
     &:last-child {
@@ -79,6 +94,11 @@ const AvailableCircle = styled.div`
   border: 1px solid #000;
   margin-right: 0.5rem;
   position: relative;
+  min-width: 1rem;
+
+  @media ${theme.breakpoint.onlyMobile} {
+    display: none;
+  }
 
   &:after {
     content: " ";

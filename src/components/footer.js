@@ -3,12 +3,13 @@ import styled from "styled-components";
 import * as Comp from "./layoutComponents";
 import Circle3 from "../images/circle-3.svg";
 import Bullet from "../images/bullet.svg";
+import { theme } from "./theme";
 
 const Footer = () => (
   <FooterContainer id="about">
     <Comp.Container>
-      <AboutMeContainer>
-        <AboutMeContent>
+      <AboutMeContainer mobile padded>
+        <Comp.Column padded style={{ flex: "1" }}>
           <h4>About Me</h4>
           <p className="font-sm">
             I felt in love with the web at 13 years old and at some point it
@@ -53,17 +54,21 @@ const Footer = () => (
               <strong>Email</strong>
             </a>{" "}
             or{" "}
-            <a href="#">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://api.whatsapp.com/send?phone=+525510265196"
+            >
               <strong>Whatsapp</strong>
             </a>{" "}
             to chat about your project and work together.
           </p>
-        </AboutMeContent>
-        <Comp.Flex1>
+        </Comp.Column>
+        <Comp.Column style={{ flex: "1" }} padded>
           <div className="text-center">
             <img src={Circle3} />
           </div>
-        </Comp.Flex1>
+        </Comp.Column>
       </AboutMeContainer>
     </Comp.Container>
     <FooterGrid>
@@ -267,34 +272,39 @@ const FooterContainer = styled.footer`
   position: relative;
 `;
 
-const AboutMeContainer = styled(Comp.FlexAlignChild)`
+const AboutMeContainer = styled(Comp.Row)`
   padding: 6rem 0;
 `;
 
-const AboutMeContent = styled(Comp.Flex1)`
-  padding-right: 3rem;
-`;
-
 const FooterGrid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1.5fr;
+  display: flex;
   border-top: 0.5px solid #fff;
 
   ul {
     list-style-image: url(${Bullet});
     margin-left: 1rem;
   }
+
+  @media ${theme.breakpoint.onlyMobile} {
+    flex-direction: column;
+  }
 `;
 
 const GridItem = styled.div`
-  &:not(:last-child) {
-    border-right: 0.5px solid #fff;
+  @media ${theme.breakpoint.upFromMobile} {
+    &:not(:last-child) {
+      border-right: 0.5px solid #fff;
+    }
   }
 `;
 
 const GridBox = styled.div`
   padding: 10% 10% 5% 10%;
   font-size: 0.88rem;
+
+  @media ${theme.breakpoint.onlyMobile} {
+    border-bottom: 0.5px solid #fff;
+  }
 
   &:not(:last-child) {
     border-bottom: 0.5px solid #fff;
