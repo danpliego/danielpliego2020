@@ -291,8 +291,10 @@ const FooterGrid = styled.div`
 `;
 
 const GridItem = styled.div`
+  flex: 2;
   @media ${theme.breakpoint.upFromMobile} {
     &:not(:last-child) {
+      flex: 1;
       border-right: 0.5px solid #fff;
     }
   }

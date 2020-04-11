@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import * as Comp from "./layoutComponents";
+import { Link } from "gatsby";
 
 // eslint-disable-next-line
 const Beaubble = require("../images/thumbnails/beaubble.jpg");
@@ -37,24 +38,24 @@ export const HomeProjects: React.FC = () => {
           external_url="https://formkitchens.com"
         />
         <ProjectCard
+          image={Praga}
+          name="Praga"
+          description="Website theme design"
+          url="/praga"
+        />
+      </Comp.Row>
+      <Comp.Row mobile padded>
+        <ProjectCard
           image={EasyBroker}
           name="EasyBroker Homepage"
           description="Visual design and front-end development in collaboration with in-house team"
           external_url="https://www.easybroker.com"
         />
-      </Comp.Row>
-      <Comp.Row mobile padded>
         <ProjectCard
           image={MyBusiness}
           name="MyBusiness"
           description="Full Project"
           external_url="https://mybusinesspos.com/"
-        />
-        <ProjectCard
-          image={Praga}
-          name="Praga"
-          description="Website theme design"
-          external_url="https://dribbble.com/shots/6021701-Praga-Real-Estate-Website-Theme/attachments/1293920"
         />
         <ProjectCard
           image={Indigo}
@@ -91,32 +92,51 @@ interface ProjectProps {
   image: string;
   name: string;
   description: string;
-  external_url: string;
+  external_url?: string;
+  url?: string;
 }
 
 const ProjectCard: React.FC<ProjectProps> = ({
   image,
   name,
   description,
-  external_url
+  external_url,
+  url
 }) => {
   return (
     <>
       <ProjectCardContainer padded>
-        <a href={external_url} target="_blank">
-          <ProjectImage>
-            <img src={image} />
-            <HoverActions>
-              <span>
-                View website <img src={ArrowRight} />
-              </span>
-            </HoverActions>
-          </ProjectImage>
-          <h4 style={{ marginBottom: "0.5rem" }}>{name}</h4>
-          <p className="font-sm">
-            <i>{description}</i>
-          </p>
-        </a>
+        {external_url ? (
+          <a href={external_url} target="_blank">
+            <ProjectImage>
+              <img src={image} />
+              <HoverActions>
+                <span>
+                  View website <img src={ArrowRight} />
+                </span>
+              </HoverActions>
+            </ProjectImage>
+            <h4 style={{ marginBottom: "0.5rem" }}>{name}</h4>
+            <p className="font-sm">
+              <i>{description}</i>
+            </p>
+          </a>
+        ) : (
+          <Link to={url}>
+            <ProjectImage>
+              <img src={image} />
+              <HoverActions>
+                <span>
+                  View project <img src={ArrowRight} />
+                </span>
+              </HoverActions>
+            </ProjectImage>
+            <h4 style={{ marginBottom: "0.5rem" }}>{name}</h4>
+            <p className="font-sm">
+              <i>{description}</i>
+            </p>
+          </Link>
+        )}
       </ProjectCardContainer>
     </>
   );

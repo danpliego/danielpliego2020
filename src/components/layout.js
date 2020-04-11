@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 import { GlobalStyle } from "./globalStyle";
-import { MainWrapper } from "./layoutComponents";
+import * as Comp from "./layoutComponents";
 import Footer from "./footer";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme";
@@ -22,10 +22,10 @@ const Layout = ({ children }) => (
       <>
         <GlobalStyle />
         <ThemeProvider theme={theme}>
-          <MainWrapper>
+          <Comp.MainWrapper>
             <main>{children}</main>
             <Footer />
-          </MainWrapper>
+          </Comp.MainWrapper>
         </ThemeProvider>
       </>
     )}
