@@ -4,6 +4,7 @@ import Circle1 from "../images/circle-1.svg";
 import Circle2 from "../images/circle-2.svg";
 import styled from "styled-components";
 import { theme } from "./theme";
+import * as Keyframes from "./keyframes";
 
 const Hero = () => (
   <HeroContainer>
@@ -75,13 +76,18 @@ const ImagesContainer = styled.div`
     top: -4rem;
     position: absolute;
 
+    &:not(:last-child) {
+      animation: ${Keyframes.Rotation} 10s linear;
+      animation-iteration-count: infinite;
+    }
+
     &:last-child {
       top: 3.5rem;
       left: 0.5rem;
 
       &:hover {
         transition: all 0.5s ease-in-out;
-        transform: translate(0px, -2rem);
+        transform: translate(0px, -5rem);
       }
     }
   }

@@ -4,6 +4,7 @@ import * as Comp from "./layoutComponents";
 import Circle3 from "../images/circle-3.svg";
 import Bullet from "../images/bullet.svg";
 import { theme } from "./theme";
+import * as Keyframes from "./keyframes";
 
 const Footer = () => (
   <FooterContainer id="about">
@@ -64,11 +65,11 @@ const Footer = () => (
             to chat about your project and work together.
           </p>
         </Comp.Column>
-        <Comp.Column style={{ flex: "1" }} padded>
+        <AboutMeImage style={{ flex: "1" }} padded>
           <div className="text-center">
             <img src={Circle3} />
           </div>
-        </Comp.Column>
+        </AboutMeImage>
       </AboutMeContainer>
     </Comp.Container>
     <FooterGrid>
@@ -274,6 +275,13 @@ const FooterContainer = styled.footer`
 
 const AboutMeContainer = styled(Comp.Row)`
   padding: 6rem 0;
+`;
+
+const AboutMeImage = styled(Comp.Column)`
+  img {
+    animation: ${Keyframes.Rotation} 10s linear;
+    animation-iteration-count: infinite;
+  }
 `;
 
 const FooterGrid = styled.div`
