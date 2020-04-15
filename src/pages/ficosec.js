@@ -14,10 +14,10 @@ const Ficosec3 = require("../images/projects/ficosec/ficosec-3.jpg");
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Praga" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Ficosec App" keywords={[`gatsby`, `application`, `react`]} />
     <ProjectLayout
-      name="Ficosec WebApp"
-      subtitle="Design Sprints, UX, UI Design and User Testing // 2019"
+      name="Ficosec App"
+      subtitle="2019 - Design Sprints, UX, UI Design, and User Testing"
       description={
         <>
           <p>

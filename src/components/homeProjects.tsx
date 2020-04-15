@@ -13,6 +13,9 @@ const Praga = require("../images/thumbnails/praga.jpg");
 const DealEngine = require("../images/thumbnails/deal-engine.jpg");
 const Indigo = require("../images/thumbnails/indigo.jpg");
 const Ramiro = require("../images/thumbnails/ramiro.jpg");
+const EBApp = require("../images/thumbnails/ebapp.jpg");
+const Ficosec = require("../images/thumbnails/ficosec.jpg");
+const YAM = require("../images/thumbnails/yam.jpg");
 
 // eslint-disable-next-line
 const ArrowRight = require("../images/arrow-right.svg");
@@ -26,16 +29,22 @@ export const HomeProjects: React.FC = () => {
       </h4>
       <Comp.Row mobile padded>
         <ProjectCard
-          image={Beaubble}
-          name="Ficosec"
-          description="Web App UX and UI"
-          url="/ficosec"
+          image={EBApp}
+          name="EasyBroker App"
+          description="UX - UI Design"
+          url="/ebapp"
         />
         <ProjectCard
           image={Form}
-          name="Form Kitchens Homepage"
-          description="Visual Design in collaboration with in-house team"
-          external_url="https://formkitchens.com"
+          name="Form Kitchens"
+          description="Web app UX and UI"
+          url="/form"
+        />
+        <ProjectCard
+          image={Ficosec}
+          name="Ficosec"
+          description="Web app UX and UI"
+          url="/ficosec"
         />
       </Comp.Row>
       <Comp.Row mobile padded>
@@ -46,16 +55,16 @@ export const HomeProjects: React.FC = () => {
           external_url="https://beaubble.com"
         />
         <ProjectCard
-          image={Form}
-          name="Form Kitchens Homepage"
-          description="Visual Design in collaboration with in-house team"
-          external_url="https://formkitchens.com"
+          image={Praga}
+          name="Praga &amp; Berlin"
+          description="Website template designs"
+          url="/praga"
         />
         <ProjectCard
-          image={Praga}
-          name="Praga"
-          description="Website theme design"
-          url="/praga"
+          image={YAM}
+          name="Yam"
+          description="Website design and development"
+          url="/yam"
         />
       </Comp.Row>
       <Comp.Row mobile padded>
@@ -66,36 +75,36 @@ export const HomeProjects: React.FC = () => {
           external_url="https://www.easybroker.com"
         />
         <ProjectCard
-          image={MyBusiness}
-          name="MyBusiness"
+          image={Berbli}
+          name="Berbli"
           description="Full Project"
-          external_url="https://mybusinesspos.com/"
+          external_url="http://berbli.danielpliego.com/"
         />
+        <ProjectCard
+          image={Ramiro}
+          name="Ramiro Mendoza"
+          description="Full Project"
+          external_url="http://ramiromendozaarq.com"
+        />
+      </Comp.Row>
+      <Comp.Row mobile padded>
         <ProjectCard
           image={Indigo}
           name="Indigo Translations"
           description="Full Project"
           external_url="http://indigotranslations.com.mx/"
         />
-      </Comp.Row>
-      <Comp.Row mobile padded>
+        <ProjectCard
+          image={MyBusiness}
+          name="MyBusiness"
+          description="Full Project"
+          external_url="https://mybusinesspos.com/"
+        />
         <ProjectCard
           image={DealEngine}
           name="Deal Engine Landing Page"
           description="Full Project"
           external_url="https://deal-engine.com/"
-        />
-        <ProjectCard
-          image={Ramiro}
-          name="Ramiro Mendoza Portafolio"
-          description="Full Project"
-          external_url="http://ramiromendozaarq.com/"
-        />
-        <ProjectCard
-          image={Berbli}
-          name="Berbli Landing Page"
-          description="Full Project"
-          external_url="http://berbli.danielpliego.com/"
         />
       </Comp.Row>
     </div>

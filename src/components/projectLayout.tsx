@@ -23,8 +23,10 @@ export const ProjectLayout: React.FC<ProjectLayoutProps> = ({
       <Menu />
       <ProjectHero mobile>
         <Comp.Column>
-          <h1>{name}</h1>
-          <p>{subtitle}</p>
+          <HeroContent>
+            <h1>{name}</h1>
+            <p>{subtitle}</p>
+          </HeroContent>
         </Comp.Column>
         <Comp.Column>{description}</Comp.Column>
       </ProjectHero>
@@ -43,7 +45,6 @@ const ProjectHero = styled(Comp.Row)`
   padding: 11rem 0 6rem;
 
   h1 {
-    max-width: 75%;
     font-size: 3rem;
   }
 
@@ -54,6 +55,10 @@ const ProjectHero = styled(Comp.Row)`
   > div {
     flex: 1;
   }
+`;
+
+const HeroContent = styled.div`
+  max-width: 75%;
 `;
 
 export const ProjectColumn = styled(Comp.Column)`

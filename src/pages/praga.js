@@ -18,20 +18,37 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Praga" keywords={[`gatsby`, `application`, `react`]} />
     <ProjectLayout
-      name="Praga Real Estate Theme"
-      subtitle="UI Design - Front End // 2018"
+      name="Praga &amp; Berlin Real Estate Themess"
+      subtitle="2019 - UI Design, Front End"
       description={
         <>
           <p>
             While working as a full-time employee in EasyBroker, I was
-            commisioned to design a template for the platform&apos;s website
+            commissioned to design two templates for the platform’s website
             builder.
           </p>
           <p>
-            The concept for this one was to achieve a more elegant vibe for our
-            clients with luxury listings. I achieve this result by creating
-            contrast between strong serif fonts and grotesque sans-serifs, a
-            beige colors palette and a lot of whitespace.
+            The biggest challenges for these designs were that the website
+            builder uses partials shared across all the other templates so I
+            didn’t have a lot of liberty to propose new elements, more than
+            designing with what already exists. Also, I had to design with
+            variable content, and really think about how something will look if
+            is empty or if it has a lot of information.
+          </p>
+          <p>
+            <strong>Praga:</strong> The concept for this theme was based on some
+            of the high-end clients that sell luxury properties and wanted a
+            more elegant and clean vibe for their website; I achieve this result
+            by creating a contrast between strong serif fonts and grotesque
+            sans-serifs, a contrast between black and beige colors and a lot of
+            whitespace.
+          </p>
+          <p>
+            <strong>Berlin:</strong> Berlin was meant to become the default
+            theme for your website, so we needed a very flexible,
+            easy-to-customize and clean design. For this design, we opted for
+            using huge and bold Circular font titles, remove the lines for
+            almost all dividers and use white-space instead.
           </p>
         </>
       }
@@ -41,10 +58,12 @@ const IndexPage = () => (
           <img src={Praga1} />
         </ProjectColumn>
       </Comp.Row>
-      <Comp.Row mobile padded>
+      <Comp.Row padded>
         <ProjectColumn padded>
           <img src={Praga2} />
         </ProjectColumn>
+      </Comp.Row>
+      <Comp.Row padded>
         <ProjectColumn padded>
           <img src={Praga3} />
         </ProjectColumn>
@@ -54,13 +73,6 @@ const IndexPage = () => (
           <img src={Praga4} />
         </ProjectColumn>
       </Comp.Row>
-      <a
-        href="https://dribbble.com/shots/6021701-Praga-Real-Estate-Website-Theme/attachments"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Comp.TextCenter>View more screens at dribbble</Comp.TextCenter>
-      </a>
     </ProjectLayout>
   </Layout>
 );
