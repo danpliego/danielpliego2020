@@ -19,6 +19,7 @@ const IndexPage = () => (
     <SEO title="Praga" keywords={[`gatsby`, `application`, `react`]} />
     <ProjectLayout
       name="Praga Real Estate Theme"
+      subtitle="UI Design - Front End // 2018"
       description={
         <>
           <p>

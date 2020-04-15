@@ -27,6 +27,20 @@ export const HomeProjects: React.FC = () => {
       <Comp.Row mobile padded>
         <ProjectCard
           image={Beaubble}
+          name="Ficosec"
+          description="Web App UX and UI"
+          url="/ficosec"
+        />
+        <ProjectCard
+          image={Form}
+          name="Form Kitchens Homepage"
+          description="Visual Design in collaboration with in-house team"
+          external_url="https://formkitchens.com"
+        />
+      </Comp.Row>
+      <Comp.Row mobile padded>
+        <ProjectCard
+          image={Beaubble}
           name="Beaubble"
           description="Front-End Development"
           external_url="https://beaubble.com"

@@ -8,12 +8,14 @@ const ArrowLeft = require("../images/arrow-left.svg");
 
 interface ProjectLayoutProps {
   name: string;
+  subtitle: string;
   description: JSX.Element;
 }
 
 export const ProjectLayout: React.FC<ProjectLayoutProps> = ({
   name,
   description,
+  subtitle,
   children
 }) => {
   return (
@@ -22,6 +24,7 @@ export const ProjectLayout: React.FC<ProjectLayoutProps> = ({
       <ProjectHero mobile>
         <Comp.Column>
           <h1>{name}</h1>
+          <p>{subtitle}</p>
         </Comp.Column>
         <Comp.Column>{description}</Comp.Column>
       </ProjectHero>
@@ -41,6 +44,11 @@ const ProjectHero = styled(Comp.Row)`
 
   h1 {
     max-width: 75%;
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 0.9rem;
   }
 
   > div {
